@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+3333
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=AW-AW-973352059"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'AW-973352059');
+
+</script>
+<meta http-equiv="Content-Language" content="es">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+
+<!-- AQUI Fuentes Lato-->
+<link rel='stylesheet'href='css/Font-lato.css'  type='text/css'>
+
+<!-- AQUII  EL CODIGO FAVICON  y TITULO-->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="16x6"  href="android-icon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x6"  href="android-icon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="android-icon-36x36.png">
+<link rel="icon" type="image/png" sizes="42x42" href="android-icon-42x42.png">
+<link rel="icon" type="image/png" sizes="72x72" href="android-icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="android-icon-96x06.png">
+<link rel="icon" type="image/png" sizes="144x144" href="android-icon-144x144.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<!-- AQUII  FIN DEL CODIGO FAVICON  y TITULO-->
+<title>Hotel DormiGato</title>
+
+<!-- aqui la alerta personalizada-->
+<link rel="stylesheet" href="css/bundled.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-confirm.css"/>
+<link rel="stylesheet" href="css/demo.css">
+<!-- Fin de los alerta-->
+
+<!-- AQUII  EL CODIGO  CSS para el Modal -->
+<link rel="stylesheet" href="css/demoModal.css" media="all"> <!--esto es lo que no funciona -->
+<link rel="stylesheet" href="css/tingle.css" media="all">
+<!-- FIN DEL  CODIGO para el Modal -->
+
+<link rel="stylesheet" href="css/form1.css" >
+
+<!-- Esto de abajo  no deja funcionar bien el alerta no muestra el icono de alerta TAMPOCO SOBRESALTADO TXTO HTML-->
+<link rel="stylesheet" href="css/style.css">
+<!-- FIN no deja funcionar bien el alerta no muestra el icono de alerta -->
+
+<style>
+  #menu1{ width:100%; height:80px; margin:0 auto;}
+  #menu1 ul{list-style:none}
+  #menu1 ul li{display:inline; margin:0 45px 0 45px}
+body{background-image:url(icons/dormigatonewazul.png) ; background-size: 10% 35%;background-position:45% 65%;background-repeat: no-repeat}
+body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+#boton1 {
+    padding:5px 15px;
+    background:#F2F5A9;
+    border:6;
+    cursor:pointer;
+    margin-left : 41%;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+  .title-top {
+    background-color:#2251a4;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .title-top-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .promo-content {
+    margin: 20px;
+    padding: 0 0 10px 0;
+  }
+
+  .promo-content p {
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    color: #232323;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+  h6 {
+    font-family:Arial,sans-serif;
+    font-size:17px;
+    font-weight: bold;
+    color:#fff;
+    /*margin: 10px 0 -10px 0; */
+    margin-right: 30px;
+    text-transform:none;
+    text-align: justify;
+    line-height: 120%;
+
+  }
+
+  h7 {
+    font-family:Arial,sans-serif;
+    font-size:17px;
+    font-weight: bold;
+    color:#fff;
+    /*margin: 10px 0 -10px 0; */
+    margin-right: 30px;
+    text-transform:none;
+    text-align: justify;
+  }
+  h8 {
+    display:inline-block ;
+    font-size: 1.5em;
+    margin-top: 0.1em;
+    margin-bottom: 0.30em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h9 {font-family:Arial,sans-serif;
+    font-size:14px;
+    color:#fff;
+  }
+
+  h10 {
+    font-family:Arial,sans-serif;
+    font-size:17px;
+    font-weight: bold;
+    color:#767676;
+
+  }
+  h22 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #000000;
+  }
+</style>
+
+<!-- Este script detecta si el Navegador es Chrome y si no lo es cierra el explorador-->
+<script type="text/javascript">
+   var es_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+   if(!es_chrome){
+     alert("Su navegador (IE) no puede visualizar correctamente la web. Utilice Google Chrome");
+	   window.open('', '_self', '');
+	    window.close();
+   }
+
+function alertar(texto) {
+    $.alert({
+        title: '¡Atención!',
+        content: texto,
+        icon: 'fa fa-exclamation-triangle',
+        theme: 'bootstrap',
+        type: 'orange',
+        animation: 'Rotate',
+        closeAnimation: 'Rotate',
+        buttons: {
+            okay: {
+            text: 'OK',
+            btnClass: 'btn-orange'
+            }
+        }
+    });
+}
+function valida() {
+	var nombre1 = document.getElementById("nombre").value;
+	var telefono1 = document.getElementById("telefono").value;
+	var barrio1 = document.getElementById("barrio").value;
+	var email1 = document.getElementById("email").value;
+	var desdex = new Date(document.getElementById("desde").value);
+	var hastax = new Date(document.getElementById("hasta").value);
+	var machos1 = document.getElementById("machos").value;
+	var hembras1 = document.getElementById("hembras").value;
+	var chequeado1= document.getElementById("chkbox1").checked;
+  var chequeado2= document.getElementById("chkbox2").checked;
+	var palabras1 = document.getElementById("palabras").value;
+  var hoyx = new Date(); // fecvha actual
+  var desde1 = new Date(desdex.getFullYear(),desdex.getMonth(),desdex.getDate()+1);
+  var hasta1 = new Date(hastax.getFullYear(),hastax.getMonth(),hastax.getDate());
+  var diaDeHoy = new Date(hoyx.getFullYear(),hoyx.getMonth(),hoyx.getDate());
+
+
+	//Validación de campo vacío
+  if ((nombre1 == "" ) || (telefono1 == "") || (barrio1 =="") || (email1 == "") || (isNaN(desde1.getTime())) || (isNaN(hasta1.getTime()))){  //isNaN nos indica si la fecha esta vacia
+    alertar('Debe completar la  totalidad <br> de los  <strong>Campos</strong> <em>requeridos</em>');
+    document.getElementById("nombre").focus();
+    return false;
+	}
+  if (+desde1 > +hasta1){  //El signo + es necesario debido a que los Date son objetos y jamas pueden ser iguales en comparaciones estrictas, poner el +a == +b es equivalente a poner a.valueOf() == b.valueOf()
+    alertar("Las fecha Hasta debe ser <strong>mayor</strong> <em> <br> que la consignada en <em><strong>Desde</strong>");
+    document.getElementById("desde").focus();
+    return false;
+  }
+  if(+desde1< +diaDeHoy ){
+     alertar("La Fecha desde no puede  ser <strong>menor</strong> al dia de hoy");
+     document.getElementById("desde").focus();
+     return false;
+  }
+  if((machos1=="") && (hembras1=="")){
+    alertar("Debe indicar al menos <br> una opción de sexo");
+    document.getElementById("machos").focus();
+    return false;
+
+  }
+  if ((chequeado1==false && chequeado2==false)==true){   //Si es verdad que ambos son falsos nos dara como resultado verdadero
+    alertar("Debe indicar al menos <br> un estadio del Gato");
+    document.getElementById("chkbox1").focus();
+    return false ;
+  }
+	if(palabras1=="") {
+    alertar("No ha ingresado  ningún Mensaje");
+    document.getElementById("palabras").focus();
+    return false;
+  }
+document.getElementById("loader").style.visibility = "visible";
+return true;
+}
+
+
+function goTop() {
+   window.scrollTo(0, 0);
+}
+/*
+function cancelar() {
+	 window.open('indexComputer.html','_self','');
+}
+*/
+function testear(){
+  var yourvar= document.getElementById('mensaje1').value;
+  if (yourvar == ""){
+  document.getElementById('mensaje1').value="Ingrese un Comentario";
+  }else{
+      window.open('https://api.whatsapp.com/send?phone=5491151365884&text='+yourvar, "_blank");
+  }
+}
+
+// Script de Cookies (Crear Borrar y averiguar)
+function crearCookies() {
+  var cname="dormigato";
+  var cvalue="Mensaje Modal";
+  var cantDias=180;
+  var d = new Date(); //Create an date object
+  d.setTime(d.getTime() + (cantDias*1000*60*60*24)); //Set the time to exdays from the current date in milliseconds. 1000 milliseonds = 1 second
+  var expires = "expires=" + d.toGMTString(); //Compose the expirartion date
+  document.cookie = cname+"="+cvalue+"; "+expires;//Set the cookie with value and the expiration date
+}
+
+function getCookie() {
+ var cname="dormigato";
+ var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return "Si Hay";
+    }
+  }
+  return "No Hay";
+}
+
+function eliminarCookies() {
+  var res = document.cookie;
+  var multiple = res.split(";");
+  for(var i = 0; i < multiple.length; i++) {
+    var key = multiple[i].split("=");
+    document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+  }
+}
+// Fin Script de Cookies
+
+//Script de la ventana Modal
+var seconds = 10; //número de segundos a contar
+derivo=1
+    function segundosPasaron() {
+      var segundosRestantes = seconds; //traspasa el valor a otra variable
+      //si los segundos llegan a un sólo  dígito, añadimos un cero a la izq
+      if (segundosRestantes < 10) {
+        segundosRestantes = "0" + segundosRestantes;
+      }
+      document.getElementById('contarAtras').innerHTML = "La ventana se cerrará en:  " + segundosRestantes+"  segundos";
+      if (seconds == 0) {
+        clearInterval(countdownTimer);
+        modalTinyBtn.close();
+        if (derivo=2){
+          document.getElementById('contarAtras').innerHTML = "Puede apretar ESC para salir";
+          modalTinyNoFooter.close();   //Esto no funciona Y NO SE PORQUE
+        }
+  //    Si el tiempo se agoto cierra el Modal
+      } else {
+        seconds--;
+      }
+    }
+    var countdownTimer = setInterval(segundosPasaron, 1000);
+    var varCookie=false;
+    //Funcion Del Check para dejar o no, de ver ventana modal
+    function myCheck() {
+      var checkBox = document.getElementById("chequeo");
+      var text = document.getElementById("text");
+      if (checkBox.checked == true){
+        text.style.display = "block";
+        text.innerHTML="<font color=#FF0000> &nbsp;&nbsp;No mostrar más, en el futuro, esta Ventana</font>";
+        crearCookies();
+
+      } else {
+        text.innerHTML = "&nbsp;&nbsp;Continuar mostrando, en el futuro, esta Ventana";
+        eliminarCookies();
+      }
+    }
+</script>
+
+</head>
+
+<body>
+  <div class="tingle-demo tingle-demo-tiny" >
+        <h1><font color="black">Estimado Visitante</font></h1>
+        <font color="black" size="3"> <p>Para una una mejor experiencia le sugerimos ver nuestra  web en modo de Pantalla Completa <br> Si acepta, haga Click en el botón "De Acuerdo" <br></font>
+        <font color="black" size="2" ><strong> <label id="contarAtras"></label><strong></p></font>
+        <table>
+          <tr>
+             <td>
+             <font color="black" font size="2" >  <input type="checkbox"  style="vertical-align:middle ;transform: scale(0.8)"   id="chequeo"  onclick="myCheck()"> </font>
+            </td>
+             <td>
+              <!--<p id="text" name="text" style="display:none; color:green">Coontinuar mostrando en el futuro esta Ventana" </p> -->
+               <p id="text" name="text" style="vertical-align: middle; color:green">Continuar mostrando en el futuro esta Ventana" </p>
+            </td>
+         </tr>
+       </table>
+  </div>
+  <div class="tingle-demo tingle-demo-tiny2" >
+      <font color="Green"><h2> INFORMACION</font><img src="icons/idea.png" height="40" width="40">  </h6></font>
+      <font color="black" size="3"><p><b>¿Que es Navegar en Pantalla Completa?  <br> </b></font>
+        <font color="black" size="2">Aplicando ese modo es posible ampliar la visualización de la pagina web,(todas las barras y botones del navegador se ocultan), esto permite tener en pantalla mas informacion. En todo momento ud podrá apretar F11 para habilitar o deshabilitar este modo de visualización </p></font>
+      <font size="2" color="black"> <strong><label id="contarAtras"></label></strong> </font>
+  </div>
+
+<script src="js/tingle.js"></script>
+
+<script type="text/javascript">
+    var modalTinyBtn = new tingle.modal({
+      footer: true
+    });
+    var btn = document.querySelector('.js-tingle-modal-2');
+    //*******************************
+    var hayCookie=getCookie();   //constata que haya o no un Cookie el resultado se utiliza mas adelante
+
+    //*******************************
+
+
+
+    if (hayCookie=="Si Hay"){  //Si no hay coockie es que NO se opto  por  dejar de ver la pantalla mmodal
+        modalTinyBtn.close();
+    }else{
+        modalTinyBtn.open();
+        modalTinyBtn.setContent(document.querySelector('.tingle-demo-tiny').innerHTML);
+        modalTinyBtn.addFooterBtn('De Acuerdo', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+        var elem =document.documentElement;
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen)  { /* Chrome, Safari and Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen)  { /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+        modalTinyBtn.close();
+        });
+        modalTinyBtn.addFooterBtn('No por Ahora', 'tingle-btn tingle-btn--default tingle-btn--pull-right', function(){
+        modalTinyBtn.close();
+    });
+
+//BOTON INFORMACION//
+      modalTinyBtn.addFooterBtn('+ Información', 'tingle-btn tingle-btn--danger', function(){
+        var modalTinyNoFooter = new tingle.modal({
+          onOpen: function() {
+            seconds=10;
+            derivo=2;
+          }
+        });
+        var btn = document.querySelector('.js-tingle-modal-1');
+        modalTinyBtn.close();
+        modalTinyNoFooter.setContent(document.querySelector('.tingle-demo-tiny2').innerHTML);
+        modalTinyNoFooter.open();
+      });
+}
+</script>
+<!-- FIN Script de la ventana Modal -->
+
+	<div id="wrapper">
+		<div id="site_name_with_logo_1"><img alt="LogoDormigato" src="icons/logoComputer.gif"/>
+    </div>
+		<div id="site_name"><H8>Hotel para Gatos<H8>
+    </div>
+	  <div class="nav">
+		 <ul class="radial-nav">
+		  <li data-content="somos"><a href="#">Quienes Somos</a></li>
+		  <li data-content="comodidad"><a href="#">Comodi- dad</a></li>
+		  <li data-content="servicios"><a href="#">Servicios</a></li>
+		  <li data-content="video"><a href="#">Ver Video</a></li>
+		  <li data-content="formulario"><a href="#">Formula- rios</a></li>
+		  <li data-content="email"><a href="#">Email</a></li>
+		  <li data-content="whatsapp"><a href="#">Whats- app</a></li>
+		  <li data-content="maps"><a href="#">Google maps</a></li>
+		  <li class="menu"><span class="icon-menu"></span></li>
+     </ul>
+	  </div>
+  </div>
+
+	<section class="content">
+	   <article class="item" id="somos">
+		     <H1> Quienes Somos </h1>
+    		         <H6>  DormiGato es un Hotel exclusivo para felinos., Es un emprendimiento familiar que se origina en Octubre del 2008 como una idea social de brindar a los amantes de los gatos un lugar donde los puedan entregar a su cuidado. <br>
+                   El Hotel se caracteriza por ser el primero en su clase que reúne el servicio de alojamiento en un espacio físico ambientado especialmente y de uso exclusivo de los gatitos. La atención, dedicación y trato es absolutamente personal, con lo cual ud. podrá confiar en todo momento que quien lo atiende, también es quien cuida a su mascota. <br>
+                   Nosotros amamos a los gatos, disfrutamos de su afecto y compañía. <br>
+                   <H1>Nuestra misión: </H1> <H6> "El Compromiso de cuidar de sus afectos". </H6> <br><br><br><br><br>
+       <div id="menu1">
+       	<ul>
+          <li>  <h10><img style="vertical-align:middle" src="icons/Celular.png"  width="55" height="55"/> 011 15-51365884 </h10>  </li>
+       		<li><a href="http://facebook.com/profile.php?id=106017991576" style="text-decoration:none;" target="_blank"> <b><H7> <img style="vertical-align:middle" src="icons/facebook.png"  width="57" height="52" />Facebook</b></h7></a> </li>
+       		<li><a href="https://mobile.twitter.com/@dormigato"  style="text-decoration:none;"         target="_blank">  <b><H7><img style="vertical-align:middle" src="icons/twitter.png"    width="60" height="60" />Twitter</a> </b></H7></li>
+       	</ul>
+       </div>
+	    </article>
+
+	    <article class="item" id="comodidad">
+		     <H1> El Hotel</h1>
+		        <H6 >El Hotel dispone de una amplio espacio de más de 60m2 con luz natural todo el día y con sol directo por las tardes. Fresco en verano y en el invierno ambientado con mullidas alfombras y almohadones. Las escalinatas, pasarelas a desnivel, terraplenes, túneles, muebles, son parte de la arquitectura montada y que ofrecemos para que los gatitos puedan divertirse. Una amplia pasarela sobre nivel es la predilecta de los gatos. Bien decimos que son sus predilecciones, porque los felinos adoran las alturas recordándoles sus épocas primitivas como depredadores.<br>
+            Tenemos preparado para ellos cajas de madera y de cartón, también troncos rascadores para sus uñas y pequeños juguetes para entretenerlos en su esparcimiento cotidiano. <br>
+            Además, como es lógico, ofrecemos el cajón sanitario con piedritas que
+            es higienizado varias veces al día. <br>
+            El Hotel cuenta con 8 jaulas, que sólo son utilizadas en el período de adaptación al momento del ingreso, para cuidarlos de sí mismo y de los restantes gatos (pueden ser unas pocas horas o a lo sumo 1 o 2 días, dependiendo del nivel del estrés del gatito). Posteriormente, y bajo supervisión, lo liberamos para que pueda compartir con el resto de nuestros huéspedes. Las únicas excepciones a esta regla de libertad, son: 1) resurgimiento del estrés con agresión. 2) intento continuo de fuga o que pensamos que ello pudiera ocurrir por el comportamiento observado del mismo.<br>
+            También disponemos de una Casita cómoda y con almohadones que el uso y costumbre la denominó "Casita de los Miedos". Muchos de los gatitos suelen esconderse allí una vez liberados, aunque luego van tomando confianza y comparten y conviven sin problemas con los demás. Otros gatitos son más solitarios y tienden a aislarse dentro de la casita. <br>
+            <b>Música:</b> Ambientamos nuestro Hotel con Música con arreglos especiales para Mascotas. <br></H6>
+          <P> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="FotoGaleria/indexGaleria.html" target="_blank">  <img    onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="icons/fotoGaleria.png" style=" display: block; margin-left: auto; margin-right: auto;" alt="Foto Galeria" width="107" height="107" /></a> </p>
+            <!-- Script de Mouse Over y Mouse down de la fotogaleria-->
+          <script>
+            function bigImg(x) {
+              x.style.height = "134px";
+              x.style.width = "134px";
+            }
+            function normalImg(x) {
+              x.style.height = "107px";
+              x.style.width = "107px";
+            }
+          </script>
+
+	    </article>
+
+	    <article class="item" id="servicios">
+		       <h1>SERVICIOS:<h1>
+            <h6 style="font-size: 16px;">Alojamiento y cuidados de su mascota: <br>
+            Transitoriamente  cada gatito se lo ubicará en una jaula cuyas características se describen en el link "Comodidades" del Menú Principal. <br>
+            Su mascota recibirá durante su estadía dedicación, caricias y cuidados. Se atenderá su alimentación e higiene. <br>
+            También, si está acostumbrada y es dócil , cepillaremos su pelaje, para lo cual deberán traernos su propio cepillo o peine. <br>
+            Si lo desean, podrán traer juguetes o elementos que hagan la estadía de su gato más agradable. <br>
+            La información que nos brinde sobre la alimentación preferida, así como la cantidad y frecuencia se tendrán especialmente en cuenta. Si su gato ingiere cantidades exactas, disponemos de balanza para pesar las raciones. <br>
+            Podemos brindarle alimentación fresca (p.ej. carne, pescado, pollo) con un cargo adicional. La alimentación se realiza como regla general por la mañana y por la noche. <br>
+            La ingesta de pastillas y comprimidos, así como la aplicación  de inyecciones de insulina para diabetes felina están incluidos en el precio, siempre y cuando su gato está acostumbrado a ello (No muerda ni rasguñe). Si no fuese así, deberemos llamar a un veterinario a su cargo. <br>
+            En caso de emergencia contamos las 24 hs con un médico veterinario de cabecera externo, así como también con un hospital veterinario cercano. <br>
+            Nota: El alimento seco en todos los casos deberá ser provisto por el dueño. <br>
+            Lamentablemente por cuestiones sanitarias y de organización interna del Hotel NO alojamos Gatos machos o hembras "adultos" (más de 7 meses) que no hayan sido esterilizados. Se exceptúa de dicha regla a los gatos cuya finalidad sea la reproducción a condición que permanezcan en jaula con breves y controladas salidas ( con cargo adicional) <br>
+            <b>Requisitos:<b> Además de todo otro requisito indicado en la Carta de Admisión  (ver el link formularios) el Gato deberá: <br>
+            1. Encontrarse sano y desparasitado (nos reservamos el derecho de solicitar una constancia o certificado veterinario que así lo  acredite). <br>
+            2. Presentar fotocopia de la constancia de vigencia de las vacunas "Triple Felina" y Antirábica. <br>
+            3. Aplicar la Pipeta Antipulgas entre 3 a 5 días antes del ingreso al Hotel para garantizar una protección más efectiva e integral.<br></H6>
+      </article>
+
+    	<article class="item" id="video">
+		      <h1>Video:</h1><H6>Vista de nuestro Hotel</h6>
+          <iframe width="500" height="375" src="https://youtube.com/embed/G41Tf3W6oLM" ></iframe>
+      </article>
+
+      <article class="item" id="formulario">
+        <div id="third">
+ 		       <div class="promo-content">
+             <label ><h1 >   Para visualizar y completar haga click en la imagen  </h1> <br><br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <a href="Celulares/alojamiento.pdf" target="_blank" > <img height="70" style=vertical-align:middle src="icons/pdf.png" width="70"></a>
+             </label>
+           </div>
+       </div>
+     </article>
+
+     <article class="item"  id="email"  >
+       <div id="first"  >
+	       <form action="dormigatoEmail.php"  name="formGato" method="post"onSubmit="return valida()">
+            <label>
+              <h9>Nombre: &nbsp; &nbsp;</h9>
+   		        <input  type="text" name="nombre" id="nombre" required/> <br>
+		        </label>
+		        <label >
+              <h9 style="padding-right:30px;">Email:</h9>
+	   	        <input type="email" name="emailForm" id="emailForm" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" required /> <br>
+		        </label>
+		        <label>
+              <h9> Teléfono:&nbsp; &nbsp;</h9>
+	   	        <input type="text"   name="telefono" id="telefono" pattern="[0-9/-]{6,14}" required/>
+		        </label>
+		        <label>
+  	          <h9>  Barrio:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; </h9> <input type="text" name="barrio" id="barrio" required /> <br>
+		        </label>
+		        <label>
+  	  	        <h9>Desde:</h9><input type="date"  pattern="[0-9/]{10}" title="Debe tener Formato dd/mm/aa" name="desde" id="desde" />
+	      	      <h9>Hasta:</h9>
+  	  	        <input type="date" pattern="[0-9/]{10}" title="Debe tener Formato dd/mm/aa" name="hasta"   id="hasta" /><br>
+		        </label>
+		        <label>
+  		          <h9 > Cant de Gatos:  Hembras:&nbsp; &nbsp;</h9>
+  	  	        <input Type="text"   name="hembras" id="hembras" size="1" minlength="1"  pattern="[0-5/]{1}"  maxlength="1" />
+ 	   	          <h9 style="padding-right:10px;"> &nbsp;&nbsp; Machos: &nbsp;</h9>
+ 	   	          <input Type ="text" name="machos" id="machos" size="1" minlength="1" pattern="[0-5/]{1}" maxlength="1"/> <br>
+		        </label>
+            <div class="checkbox">
+		            <label > <h9>Castrados:&nbsp;&nbsp;&nbsp;&nbsp; SI: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="chkbox1" name="chkbox1" unchecked />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;NO: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  &nbsp;&nbsp;
+                  <input  type="checkbox" id="chkbox2" name="chkbox2"  unchecked/> </h9> <br>
+  	            </label>
+            </div>
+		            <label  ><h9> Mensaje: &nbsp;</h9>
+		              <textarea  style="vertical-align:text-top;" placeholder="Ingrese su consulta" name="palabras" id="palabras" cols="40" rows="10" ></textarea>
+                </label>
+            <div class="botonera">
+	 	           <input type="reset" name="resetear" id="resetear" value="Borrar Ingresos" onClick=goTop()>
+               <input type="submit" class="btn btn-primary btn-block example-p-70-type" name="submit1" id="submit1" value="Enviar" />
+             </div>
+             <label id="loader" style="visibility:hidden; font-size:17px; color:#FFFFFF;"><img src="icons/loader33.gif"  style=" margin-left:145px;  vertical-align: middle;  width:60px; height:50px ;"/>Enviando <img src="icons/punto5.gif" style=" width:25px; height:25px; vertical-align: middle;"> Aguarde por Favor</label>
+         </form>
+       </div>
+     </article>
+
+     <article class="item" id="whatsapp">
+	      <h1>WHATSAPP:</h1>
+        <div id="second">
+          <h7><p > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="Whatsapp"  src="icons/whatsapp.png"  width="30" height="30"/>  Complete el Formulario </p></h7> <br>
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        <textarea id="mensaje1" placeholder="Ingrese su comentario"  autofocus="autofocus"> </textarea> <br>
+ 	        <button type="button" onclick="testear()" id="boton1"> Enviar </button> <br><br>
+        </div>
+      </article>
+
+      <article class="item" id="maps">
+        <h1>MAPA: </h1> <h6> Como Ubicarnos:</h6><br>
+        <p>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="700" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=Hotel+DormiGato&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+            <style>
+              .mapouter{position:absolute;text-align:right;height:450px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:450px;width:600px;}
+            </style>
+          </div>
+        </p>
+      </article>
+</section>
+
+<!-- Lo que sigue responde a menu radial -->
+<script src="js/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<!-- Lo que sigue responde a Alerta -->
+<script type="text/javascript" src="js/bundled.js"></script>
+<script type="text/javascript" src="js/jquery-confirm.js"></script>
+
+<!-- Lo que sigue responde a las Ventanas Modales-->
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
